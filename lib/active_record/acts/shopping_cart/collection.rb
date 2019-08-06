@@ -5,6 +5,8 @@ module ActiveRecord
         #
         # Adds a product to the cart
         #
+        Money.locale_backend = nil
+        
         def add(object, price, quantity = 1, cumulative = true)
           cart_item = item_for(object)
 
